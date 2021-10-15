@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package test;
+
+
+message Req {
+    bytes payload = 1;
+}
+
+message Resp {
+    bytes payload = 1;
+}
+
+service TestService {
+    rpc call(Req) returns (Resp);
+}
+
